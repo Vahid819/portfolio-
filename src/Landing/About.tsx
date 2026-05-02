@@ -1,6 +1,7 @@
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowRight, Download, Mail } from "lucide-react"; 
+import { FaLinkedin, FaGithub, FaFigma, FaDribbble, FaTwitter } from "react-icons/fa"; 
 import Image1 from "../assets/image.jpg";
 
 function About() {
@@ -44,10 +45,7 @@ function About() {
 
       {/* Right Section - EXACT Annotated Bento Layout */}
       <section className="w-full lg:w-1/2 mt-12 lg:mt-0 flex flex-col gap-4">
-        
-        {/* ==================================== */}
-        {/* ROW 1: 45% Width / 55% Width         */}
-        {/* ==================================== */}
+
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:h-[300px]">
           
           {/* Top Left: Brand/Logo Block (45%) */}
@@ -102,20 +100,41 @@ function About() {
             </div>
           </div>
 
-          {/* Bottom Right: Social Icons Grid (35%) */}
-          <div className="w-full sm:w-[35%] h-50 sm:h-full p-4 border border-slate-200 dark:border-slate-800 rounded-3xl bg-white dark:bg-slate-900/50 shadow-sm grid grid-cols-2 gap-3">
-            <a href="#" className="w-full h-full rounded-2xl bg-violet-50 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <Mail className="w-6 h-6 text-violet-500" />
+          {/* Bottom Right: Aesthetic Glassy Social Icons Grid (35%) */}
+          {/* Bottom Right: Aesthetic Glassy Social Icons Grid (35%) */}
+          {/* Bottom Right: Aesthetic Glassy Social Icons Grid (35%) */}
+          <div className="w-full sm:w-[35%] h-[200px] sm:h-full p-4 md:p-6 border border-white/40 dark:border-white/10 rounded-3xl bg-slate-50/50 dark:bg-slate-900/40 backdrop-blur-xl shadow-lg grid grid-cols-3 place-content-center place-items-center gap-4">
+            
+            {/* Mail Icon */}
+            <a href="#" className="group relative w-14 h-14 lg:w-11 lg:h-11 rounded-full bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/50 hover:bg-violet-500/10 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] overflow-hidden">
+              <Mail className="w-6 h-6 lg:w-5 lg:h-5 hover:w-6 hover:h-6 text-slate-600 dark:text-slate-400 group-hover:text-violet-500 transition-colors duration-300 relative z-10" />
             </a>
-            {/* <a href="#" className="w-full h-full rounded-2xl bg-blue-50 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <Linkedin className="w-6 h-6 text-blue-500" />
+
+            {/* LinkedIn Icon */}
+            <a href="#" className="group relative w-14 h-14 lg:w-11 lg:h-11 rounded-full bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:bg-blue-500/10 hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] overflow-hidden">
+              <FaLinkedin className="w-6 h-6 lg:w-5 lg:h-5 hover:w-6 hover:h-6 text-slate-600 dark:text-slate-400 group-hover:text-blue-500 transition-colors duration-300 relative z-10" />
             </a>
-            <a href="#" className="w-full h-full rounded-2xl bg-pink-50 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <Figma className="w-6 h-6 text-pink-500" />
+
+            {/* Figma Icon */}
+            <a href="#" className="group relative w-14 h-14 lg:w-11 lg:h-11 rounded-full bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-pink-400/50 hover:bg-pink-500/10 hover:shadow-[0_0_20px_rgba(236,72,153,0.15)] overflow-hidden">
+              <FaFigma className="w-6 h-6 lg:w-5 lg:h-5 hover:w-6 hover:h-6 text-slate-600 dark:text-slate-400 group-hover:text-pink-500 transition-colors duration-300 relative z-10" />
             </a>
-            <a href="#" className="w-full h-full rounded-2xl bg-slate-100 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
-              <Github className="w-6 h-6 text-slate-700 dark:text-white" />
-            </a> */}
+
+            {/* Github Icon */}
+            <a href="#" className="group relative w-14 h-14 lg:w-11 lg:h-11 rounded-full bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-slate-400/50 hover:bg-slate-500/10 hover:shadow-[0_0_20px_rgba(100,116,139,0.15)] overflow-hidden">
+              <FaGithub className="w-6 h-6 lg:w-5 lg:h-5 hover:w-6 hover:h-6 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-300 relative z-10" />
+            </a>
+            
+            {/* Dribbble Icon */}
+            <a href="#" className="group relative w-14 h-14 lg:w-11 lg:h-11 rounded-full bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-rose-400/50 hover:bg-rose-500/10 hover:shadow-[0_0_20px_rgba(244,63,94,0.15)] overflow-hidden">
+              <FaDribbble className="w-6 h-6 lg:w-5 lg:h-5 hover:w-6 hover:h-6 text-slate-600 dark:text-slate-400 group-hover:text-rose-500 transition-colors duration-300 relative z-10" />
+            </a>
+
+            {/* Twitter/X Icon */}
+            <a href="#" className="group relative w-14 h-14 lg:w-11 lg:h-11 rounded-full bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:bg-sky-500/10 hover:shadow-[0_0_20px_rgba(14,165,233,0.15)] overflow-hidden">
+              <FaTwitter className="w-6 h-6 lg:w-5 lg:h-5 hover:w-6 hover:h-6 text-slate-600 dark:text-slate-400 group-hover:text-sky-500 transition-colors duration-300 relative z-10" />
+            </a>
+
           </div>
 
         </div>
