@@ -21,12 +21,12 @@ function About() {
 
         <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-foreground">
           Hi, I'm a{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-600">
             Full Stack Developer
           </span>
         </h1>
 
-        <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[600px] mb-8">
+        <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-150 mb-8">
           A passionate developer specializing in React and Next.js. I create
           beautiful, performant web applications and interactive experiences.
         </p>
@@ -46,10 +46,10 @@ function About() {
         <div className="w-full columns-1 sm:columns-2 gap-4 space-y-4">
           {/* Item 1: Brand/Logo Block */}
           <div
-            className="h-[300px] break-inside-avoid border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat group"
+            className="h-75 break-inside-avoid border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat group"
             style={{ backgroundImage: `url(${Image1})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/80 transition-opacity duration-500 group-hover:opacity-80"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/80 transition-opacity duration-500 group-hover:opacity-80"></div>
 
             <div className="relative z-10 h-full flex flex-col justify-between">
               <div>
@@ -81,8 +81,8 @@ function About() {
 
         <div className="w-full columns-1 sm:columns-2 gap-4 space-y-4 mt-4">
           {/* Item 4: Purple Brands Box (ADDED) */}
-          <div className="w-full break-inside-avoid rounded-2xl p-6 bg-gradient-to-br from-[#8b7ff9] to-[#a294ff] shadow-md flex flex-col justify-between h-[200px]">
-            <p className="text-white/90 font-medium text-sm leading-relaxed max-w-[200px]">
+          <div className="w-full break-inside-avoid rounded-2xl p-6 bg-linear-to-br from-[#8b7ff9] to-[#a294ff] shadow-md flex flex-col justify-between h-50">
+            <p className="text-white/90 font-medium text-sm leading-relaxed max-w-50">
               The most recent brands
               <br /> I happily worked with &lt;3
             </p>
