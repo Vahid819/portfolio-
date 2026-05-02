@@ -6,6 +6,7 @@ import Image1 from "../assets/image.jpg";
 function About() {
   return (
     <main className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center gap-12 px-6 lg:px-24 max-w-7xl mx-auto pt-24 lg:pt-0">
+      
       {/* Left Section - Text Content */}
       <section className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
         <Badge
@@ -21,12 +22,12 @@ function About() {
 
         <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-foreground">
           Hi, I'm a{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-600">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">
             Full Stack Developer
           </span>
         </h1>
 
-        <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-150 mb-8">
+        <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-[600px] mb-8">
           A passionate developer specializing in React and Next.js. I create
           beautiful, performant web applications and interactive experiences.
         </p>
@@ -41,15 +42,20 @@ function About() {
         </div>
       </section>
 
-      {/* Right Section - Mini Masonry Collage */}
-      <section className="w-full lg:w-1/2 mt-12 lg:mt-0">
-        <div className="w-full columns-1 sm:columns-2 gap-4 space-y-4">
-          {/* Item 1: Brand/Logo Block */}
+      {/* Right Section - EXACT Annotated Bento Layout */}
+      <section className="w-full lg:w-1/2 mt-12 lg:mt-0 flex flex-col gap-4">
+        
+        {/* ==================================== */}
+        {/* ROW 1: 45% Width / 55% Width         */}
+        {/* ==================================== */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:h-[300px]">
+          
+          {/* Top Left: Brand/Logo Block (45%) */}
           <div
-            className="h-75 break-inside-avoid border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat group"
+            className="w-full sm:w-[45%] h-[300px] sm:h-full border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm relative overflow-hidden bg-cover bg-center bg-no-repeat group"
             style={{ backgroundImage: `url(${Image1})` }}
           >
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/80 transition-opacity duration-500 group-hover:opacity-80"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/80 transition-opacity duration-500 group-hover:opacity-80"></div>
 
             <div className="relative z-10 h-full flex flex-col justify-between">
               <div>
@@ -69,22 +75,25 @@ function About() {
             </div>
           </div>
 
-          {/* Item 3: The Image */}
-          <div className=" break-inside-avoid rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800">
+          {/* Top Right: The Image (55%) */}
+          <div className="w-full sm:w-[55%] h-[300px] sm:h-full rounded-3xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800">
             <img
               src={Image1}
               alt="Project Showcase"
-              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
 
-        <div className="w-full columns-1 sm:columns-2 gap-4 space-y-4 mt-4">
-          {/* Item 4: Purple Brands Box (ADDED) */}
-          <div className="w-full break-inside-avoid rounded-2xl p-6 bg-linear-to-br from-[#8b7ff9] to-[#a294ff] shadow-md flex flex-col justify-between h-50">
-            <p className="text-white/90 font-medium text-sm leading-relaxed max-w-50">
-              The most recent brands
-              <br /> I happily worked with &lt;3
+        {/* ==================================== */}
+        {/* ROW 2: 65% Width / 35% Width         */}
+        {/* ==================================== */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:h-[200px]">
+          
+          {/* Bottom Left: Purple Brands Box (65%) */}
+          <div className="w-full sm:w-[65%] h-[200px] sm:h-full rounded-3xl p-6 bg-gradient-to-br from-[#8b7ff9] to-[#a294ff] shadow-md flex flex-col justify-between">
+            <p className="text-white/90 font-medium text-sm leading-relaxed">
+              The most recent brands<br /> I happily worked with &lt;3
             </p>
 
             <div className="flex items-center gap-4 text-white/80 font-bold tracking-tighter mt-4 overflow-hidden">
@@ -93,36 +102,24 @@ function About() {
             </div>
           </div>
 
-          {/* Item 5: Social Icons Grid (ADDED) */}
-          <div className="w-full p-4 border rounded-2xl break-inside-avoid grid grid-cols-3 gap-3">
-            {/* <a href="#" className="aspect-square rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center hover:scale-110 transition-transform duration-300">
-              <Figma className="w-6 h-6 text-purple-500" />
-            </a>
-            
-            <a href="#" className="aspect-square rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center hover:scale-110 transition-transform duration-300">
-              <Linkedin className="w-6 h-6 text-blue-600" />
-            </a>
-            
-            <a href="#" className="aspect-square rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center hover:scale-110 transition-transform duration-300">
-              <Dribbble className="w-6 h-6 text-pink-500" />
-            </a> */}
-
-            <a
-              href="#"
-              className="aspect-square rounded-2xl bg-violet-50 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-110 transition-transform duration-300"
-            >
+          {/* Bottom Right: Social Icons Grid (35%) */}
+          <div className="w-full sm:w-[35%] h-50 sm:h-full p-4 border border-slate-200 dark:border-slate-800 rounded-3xl bg-white dark:bg-slate-900/50 shadow-sm grid grid-cols-2 gap-3">
+            <a href="#" className="w-full h-full rounded-2xl bg-violet-50 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
               <Mail className="w-6 h-6 text-violet-500" />
             </a>
-
-            {/* <a href="#" className="aspect-square rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center hover:scale-110 transition-transform duration-300">
-              <Github className="w-6 h-6 text-slate-800 dark:text-white" />
+            {/* <a href="#" className="w-full h-full rounded-2xl bg-blue-50 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <Linkedin className="w-6 h-6 text-blue-500" />
             </a>
-            
-            <a href="#" className="aspect-square rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center hover:scale-110 transition-transform duration-300">
-              <Twitter className="w-6 h-6 text-black dark:text-white" />
+            <a href="#" className="w-full h-full rounded-2xl bg-pink-50 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <Figma className="w-6 h-6 text-pink-500" />
+            </a>
+            <a href="#" className="w-full h-full rounded-2xl bg-slate-100 dark:bg-neutral-800 shadow-sm flex items-center justify-center hover:scale-105 transition-transform duration-300">
+              <Github className="w-6 h-6 text-slate-700 dark:text-white" />
             </a> */}
           </div>
+
         </div>
+
       </section>
     </main>
   );
