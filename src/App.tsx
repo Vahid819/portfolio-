@@ -3,7 +3,7 @@ import About from "./Landing/About"
 
 function App() {
   return (
-    <div>
+    <div >
       {/* Navbar */}
       <Navbar />
       
