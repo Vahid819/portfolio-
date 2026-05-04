@@ -8,6 +8,7 @@ import { ArrowRight, Download, Mail } from "lucide-react";
 // import Marquee from "react-fast-marquee"; // Back to the normal Vite import!
 import Service from "./Service";
 import Project from "./Project";
+import Message from "./Message";
 
 import Image1 from "../assets/image.jpg";
 import GMail from "../assets/mail.png";
@@ -232,6 +233,11 @@ export default function About() {
       {/* Project Section renders below the services */}
       <div className="relative z-20 w-full">
         <Project />
+      </div>
+
+      {/* Message Section renders below the projects */}
+      <div className="relative z-20 w-full">
+        <Message />
       </div>
     </main>
   );
