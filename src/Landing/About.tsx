@@ -1,10 +1,9 @@
 "use client";
-
-import React, { useEffect } from "react"; // Added React and useEffect
+ // Added React and useEffect
 import { motion, useMotionValue, useSpring } from "framer-motion"; // Added useMotionValue and useSpring
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowRight, Download, } from "lucide-react";
 // import Marquee from "react-fast-marquee"; // Back to the normal Vite import!
 import Service from "./Service";
 import Project from "./Project";
@@ -17,6 +16,7 @@ import Figma from "../assets/figma.png";
 import Github from "../assets/github.jpg";
 import Instagram from "../assets/instagram.png";
 import X from "../assets/x.png";
+import { useEffect } from "react";
 
 export default function About() {
   // --- CURSOR TRACKING LOGIC ---
